@@ -31,7 +31,6 @@ public class SearchController extends TechJobsController {
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
 
         ArrayList<Job> jobs;
-//        model.addAttribute("columns", columnChoices);
         model.addAttribute("columns", ListController.columnChoices);
 
         if (searchTerm == null || searchTerm.toLowerCase().equals("all") || (searchTerm.toLowerCase().equals(""))) {
